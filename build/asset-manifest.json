@@ -1,0 +1,33 @@
+{
+  "files": {
+    "static/js/0.67f4b23c.chunk.js": "/static/js/0.67f4b23c.chunk.js",
+    "static/js/0.67f4b23c.chunk.js.map": "/static/js/0.67f4b23c.chunk.js.map",
+    "main.css": "/static/css/main.d526b1c6.chunk.css",
+    "main.js": "/static/js/main.e4d75a0d.chunk.js",
+    "main.js.map": "/static/js/main.e4d75a0d.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.d91faf9d.js",
+    "runtime~main.js.map": "/static/js/runtime~main.d91faf9d.js.map",
+    "static/css/3.2e24d83a.chunk.css": "/static/css/3.2e24d83a.chunk.css",
+    "static/js/3.aeb2e632.chunk.js": "/static/js/3.aeb2e632.chunk.js",
+    "static/js/3.aeb2e632.chunk.js.map": "/static/js/3.aeb2e632.chunk.js.map",
+    "static/js/4.8ffce72e.chunk.js": "/static/js/4.8ffce72e.chunk.js",
+    "static/js/4.8ffce72e.chunk.js.map": "/static/js/4.8ffce72e.chunk.js.map",
+    "static/js/5.aeeeaf92.chunk.js": "/static/js/5.aeeeaf92.chunk.js",
+    "static/js/5.aeeeaf92.chunk.js.map": "/static/js/5.aeeeaf92.chunk.js.map",
+    "static/js/6.2735d605.chunk.js": "/static/js/6.2735d605.chunk.js",
+    "static/js/6.2735d605.chunk.js.map": "/static/js/6.2735d605.chunk.js.map",
+    "static/js/7.f86a1a20.chunk.js": "/static/js/7.f86a1a20.chunk.js",
+    "static/js/7.f86a1a20.chunk.js.map": "/static/js/7.f86a1a20.chunk.js.map",
+    "static/js/8.af089cbb.chunk.js": "/static/js/8.af089cbb.chunk.js",
+    "static/js/8.af089cbb.chunk.js.map": "/static/js/8.af089cbb.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.8e64f5463ec71a8b97d0a9762c32c456.js": "/precache-manifest.8e64f5463ec71a8b97d0a9762c32c456.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/3.2e24d83a.chunk.css.map": "/static/css/3.2e24d83a.chunk.css.map",
+    "static/css/main.d526b1c6.chunk.css.map": "/static/css/main.d526b1c6.chunk.css.map",
+    "static/media/Tour-Academy-Bus.gif": "/static/media/Tour-Academy-Bus.b3d45c2d.gif",
+    "static/media/item-img.png": "/static/media/item-img.7d29fe45.png",
+    "static/media/logo.png": "/static/media/logo.4b158008.png",
+    "static/media/top-bg.png": "/static/media/top-bg.bd1262b1.png"
+  }
+}
