@@ -1,23 +1,81 @@
 import React, { useEffect } from "react"
 
 import TourCarousel from 'components/TourCarousel'
+import TourItem from 'components/TourItem'
+import BookingTourForm from 'components/BookingTourForm'
 
 import tourBus from 'assets/images/landing/Tour-Academy-Bus.gif'
-import topBg from 'assets/images/landing/top-bg.png'
+import topBg from 'assets/images/landing/top-grapes.svg'
 import itemImg from 'assets/images/landing/item-img.png'
 
-
-const TourItemData = {
-	title: 'Classic budget tour',
-	type: 'Cultural Tours',
-	description: 'If you have limited budget for your trip, you can travel with us by this tour and see most part of Armenia.',
-	days: 4,
-	nights: 7,
-	period: '10-14 feb',
-	cost: 215,
-	feedback: 5,
-	image: itemImg
-}
+const TourItemData = [
+	{
+		title: 'Classic budget tour',
+		type: 'Cultural Tours',
+		description: 'If you have limited budget for your trip, you can travel with us by this tour and see most part of Armenia.',
+		days: 4,
+		nights: 7,
+		period: '10-14 feb',
+		cost: 215,
+		feedback: 5,
+		image: itemImg
+	},
+	{
+		title: 'Classic budget tour',
+		type: 'Cultural Tours',
+		description: 'If you have limited budget for your trip, you can travel with us by this tour and see most part of Armenia.',
+		days: 4,
+		nights: 7,
+		period: '10-14 feb',
+		cost: 215,
+		feedback: 5,
+		image: itemImg
+	},
+	{
+		title: 'Classic budget tour',
+		type: 'Cultural Tours',
+		description: 'If you have limited budget for your trip, you can travel with us by this tour and see most part of Armenia.',
+		days: 4,
+		nights: 7,
+		period: '10-14 feb',
+		cost: 215,
+		feedback: 5,
+		image: itemImg
+	},
+	{
+		title: 'Classic budget tour',
+		type: 'Cultural Tours',
+		description: 'If you have limited budget for your trip, you can travel with us by this tour and see most part of Armenia.',
+		days: 4,
+		nights: 7,
+		period: '10-14 feb',
+		cost: 215,
+		feedback: 5,
+		image: itemImg
+	},
+	{
+		title: 'Classic budget tour',
+		type: 'Cultural Tours',
+		description: 'If you have limited budget for your trip, you can travel with us by this tour and see most part of Armenia.',
+		days: 4,
+		nights: 7,
+		period: '10-14 feb',
+		cost: 215,
+		feedback: 5,
+		image: itemImg
+	},
+	{
+		title: 'Classic budget tour',
+		type: 'Cultural Tours',
+		description: 'If you have limited budget for your trip, you can travel with us by this tour and see most part of Armenia.',
+		days: 4,
+		nights: 7,
+		period: '10-14 feb',
+		cost: 215,
+		feedback: 5,
+		image: itemImg
+	}
+]
 
 const Landingpage = ({}) => {
   return (
@@ -38,19 +96,31 @@ const Landingpage = ({}) => {
 	  				<div className="col-md-4">
 	  					<div className="px-3">
 		  					<h3 className="text-black text-center">Best suggestions</h3>
-		  					<TourCarousel items={[TourItemData, TourItemData, TourItemData]}/>
+		  					<TourCarousel 
+		  						items={
+		  							TourItemData.map((item, index) => <TourItem data={item} key={index}/>)
+		  						}
+		  					/>
 		  				</div>
 	  				</div>
 	  				<div className="col-md-4">
 	  					<div className="px-3">
 		  					<h3 className="text-black text-center">One Day</h3>
-		  					<TourCarousel items={[TourItemData, TourItemData, TourItemData]}/>
+		  					<TourCarousel 
+		  						items={
+		  							TourItemData.map((item, index) => <TourItem data={item} key={index}/>)
+		  						}
+		  					/>
 		  				</div>
 	  				</div>
 	  				<div className="col-md-4">
 	  					<div className="px-3">
 		  					<h3 className="text-black text-center">Fix Date</h3>
-		  					<TourCarousel items={[TourItemData, TourItemData, TourItemData]}/>
+		  					<TourCarousel 
+		  						items={
+		  							TourItemData.map((item, index) => <TourItem data={item} key={index}/>)
+		  						}
+		  					/>
 		  				</div>
 	  				</div>
 	  			</div>
@@ -58,13 +128,10 @@ const Landingpage = ({}) => {
   		</section>
   		<section className="applyTour p-4">
   			<div className="container fulid mb-5">
-	  			<h2 className="text-center">
+	  			<h2 className="text-center mb-4">
 	  				<i>Choose one of our tours or create your own tour!</i>
 	  			</h2>
-	  			<div className="row">
-	  				<div className="col-md-6"></div>
-	  				<div className="col-md-6"></div>
-	  			</div>
+	  			<BookingTourForm />
 	  		</div>
   		</section>
     </div>

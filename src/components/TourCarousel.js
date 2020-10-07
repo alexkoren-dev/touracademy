@@ -2,19 +2,20 @@ import React from 'react'
 import TourItem from './TourItem'
 import Slider from "react-slick";
 
-var settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true
-}
+const TourCarousel = ({items, config}) => {
 
-const TourCarousel = ({items}) => {
+    const settings = {
+        dots: false,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        ...config
+    }
+
 	return(
 		<Slider {...settings}>
-			{items.map((item, key) => <TourItem data={item}/>)}
+			{items}
 	    </Slider>
 	)
 }
