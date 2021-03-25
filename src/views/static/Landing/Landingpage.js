@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 
 import TourCarousel from 'components/TourCarousel'
 import TourItem from 'components/TourItem'
-import BookingTourForm from 'components/BookingTourForm'
+import BookingTourForm from 'components/BookingTour'
 
 import tourBus from 'assets/images/landing/Tour-Academy-Bus.gif'
 import topBg from 'assets/images/landing/top-grapes.svg'

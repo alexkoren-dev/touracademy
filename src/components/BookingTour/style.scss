@@ -1,0 +1,57 @@
+.booking-tour-form {
+    .create-trip {
+        input.form-control {
+            height: 40px;
+            background-color: white;
+            border: none;
+            color: #170604;
+        }
+        .react-datepicker-wrapper {
+            width: 100%;
+        }
+        .react-select__control {
+            border: none;
+            height: 40px;
+        }
+        .react-select__placeholder,
+        input.form-control::placeholder {
+            font-style: italic;
+        }
+        label {
+            height: 40px;
+            background-color: white;
+            margin-bottom: 0;
+            padding: 10px;
+            flex: 1;
+            margin-right: 10px;
+            font-style: italic;
+            color: #170604;
+        }
+        .type-button {
+            height: 40px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            padding: 4px 20px;
+            background: white;
+            font-size: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-style: italic;
+            cursor: pointer;
+            margin: 0 5px;
+
+            &.active {
+                background: #284525;
+                color: #d0d0d0;
+            }
+
+            img {
+                height: 17px;
+                margin-top: 5px;
+                width: auto;
+                object-fit: contain;
+            }
+        }
+    }
+}

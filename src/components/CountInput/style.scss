@@ -1,0 +1,16 @@
+.counter-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    input {
+        width: 50px;
+        text-align: center;
+    }
+    span {
+        margin: 0 5px;
+        cursor: pointer;
+    }
+    span img {
+        width: 20px;
+    }
+}
