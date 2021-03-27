@@ -1,0 +1,12 @@
+.destination-picker {
+    .button {
+        width: fit-content;
+        padding: 5px 15px;
+        cursor: pointer;
+
+        &.active {
+            color: white; 
+            background-color: #E5A686;
+        }
+    }
+}

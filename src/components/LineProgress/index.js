@@ -1,9 +1,13 @@
 import React from 'react'
 
-const LineProgress = ({title, value}) => {
+const LineProgress = ({titles, value}) => {
 	return(
 		<div>
-			{title && <label className="text-black"><i>{title}</i></label>}
+            <div className="d-flex">
+                {titles.map((title, key) => 
+                    <label key={key} className="text-black" style={{width: Math.floor(100/titles.length) + '%'}}><i>{title}</i></label>
+                )}
+            </div>
 			<div className="progress w-100">
 				<div className="progress-bar bg-success" 
 					role="progressbar" 

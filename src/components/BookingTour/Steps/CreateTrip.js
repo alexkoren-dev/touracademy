@@ -16,18 +16,25 @@ import HikingIcon from 'assets/images/icons/awesome-hiking.png'
 import MotorcycleIcon from 'assets/images/icons/awesome-motorcycle.png'
 import BikeIcon from 'assets/images/icons/material-directions-bike.png'
 
-const options = [
+const destinationOptions = [
     { value: 'Yerevan', label: 'Yerevan' },
     { value: 'Ashtarak', label: 'Ashtarak' },
     { value: 'Garni', label: 'Garni' },
     { value: 'Kapan', label: 'Kapan' }
 ]
 
+const mealOptions = [
+    { value: 'Meals (10 $ per one pax)', label: 'Meals (10 $ per one pax)' },
+    { value: 'Meals (20 $ per one pax)', label: 'Meals (20 $ per one pax)' },
+    { value: 'Meals (30 $ per one pax)', label: 'Meals (30 $ per one pax)' },
+    { value: 'Meals (40 $ per one pax)', label: 'Meals (40 $ per one pax)' }
+]
+
 const TOUR_TYPES = [
-    {'name': 'car', icon: CarIcon, value: 'car' },
-    {'name': 'motorcycle', icon: MotorcycleIcon, value: 'motorcycle' },
-    {'name': 'bike', icon: BikeIcon, value: 'bike' },
-    {'name': 'hiking', icon: HikingIcon, value: 'hiking' }
+    {'name': 'Car', icon: CarIcon, value: 'Car' },
+    {'name': 'Motorcycle', icon: MotorcycleIcon, value: 'Motorcycle' },
+    {'name': 'Bike', icon: BikeIcon, value: 'Bike' },
+    {'name': 'Hiking', icon: HikingIcon, value: 'Hiking' }
 ]
 
 const Yup = {
@@ -38,7 +45,7 @@ const Yup = {
 
 const initialValues = {
     name: "",
-    date: moment(new Date()).format('DD/MM/YYYY'),
+    date: moment(new Date()).format('YYYY-MM-DD'),
     destination: '',
     adultCount: 1,
     childCount: 0,
@@ -54,18 +61,19 @@ const validationSchema = Yup.object().shape({
     destination: Yup.string()
       .required("Destination is required"),
     type: Yup.string()
-      .required("Type is required")
+      .required("Type is required"),
+    meal: Yup.string()
 })
 
-const CreateTrip = ({callback}) => {
+const CreateTrip = ({nextStep}) => {
     const [destination, setDestination] = useState()
+    const [meal, setMeals] = useState()
     const [startDate, setStartDate] = useState(new Date());
 
     const handleSubmit = (values) => {
-        callback(values)
+        nextStep(values)
     }
     
-
     return(
         <div className="create-trip">
             <div className="row">
@@ -108,7 +116,7 @@ const CreateTrip = ({callback}) => {
                                 selected={startDate} 
                                 onChange={date => {
                                     setStartDate(date)
-                                    handleChange('date')(moment(date).format('DD/MM/YYYY'))
+                                    handleChange('date')(moment(date).format('YYYY-MM-DD'))
                                 }} 
                             />
                             {errors.date && touched.date && (
@@ -118,7 +126,7 @@ const CreateTrip = ({callback}) => {
 
                             <div className="form-group mb-3">
                             <ReactSelect 
-                                options={options} 
+                                options={destinationOptions} 
                                 classNamePrefix={"react-select"}
                                 placeholder="Starting destination"
                                 value={destination}
@@ -152,8 +160,8 @@ const CreateTrip = ({callback}) => {
                                         ? "d-flex align-items-center is-invalid"
                                         : "d-flex align-items-center"
                                 }>
-                                    <label style={{flex: 1}}>Type</label>
-                                    <div className="d-flex">
+                                    {/* <label style={{flex: 1}}>Type</label> */}
+                                    <div className="d-flex justify-content-center w-100">
                                         { TOUR_TYPES.map((tour, key) => 
                                             <div key={key} className={`type-button ${tour.value === values.type && 'active'}`} onClick={() => handleChange('type')(tour.value)}>
                                                 <img src={tour.icon}/>
@@ -162,7 +170,26 @@ const CreateTrip = ({callback}) => {
                                         )}
                                     </div>
                                 </div>
-                                {errors.type && touched.type && (<div className="invalid-feedback">{errors.type}</div>)}
+                                {errors.type && touched.type && (<div className="invalid-feedback text-center">{errors.type}</div>)}
+                            </div>
+
+                            <div className="form-group mb-3">
+                                <ReactSelect 
+                                    options={mealOptions} 
+                                    classNamePrefix={"react-select"}
+                                    placeholder="Meals (10 $ per one pax)"
+                                    value={meal}
+                                    onChange={(option) => {
+                                        setMeals(option || {})
+                                        handleChange("meal")(option.value);
+                                    }}
+                                    className={
+                                        errors.meal && touched.meal
+                                            ? "is-invalid"
+                                            : ""
+                                    }
+                                />
+                                {errors.meal && touched.meal && (<div className="invalid-feedback">{errors.meal}</div>)}
                             </div>
 
                             <div className="form-group mb-0 text-center">

@@ -1,7 +1,9 @@
 .booking-tour-form {
+    .submit-form,
     .create-trip {
+        textarea,
         input.form-control {
-            height: 40px;
+            min-height: 40px;
             background-color: white;
             border: none;
             color: #170604;
@@ -11,21 +13,13 @@
         }
         .react-select__control {
             border: none;
-            height: 40px;
+            min-height: 40px;
         }
+        textarea::placeholder,
         .react-select__placeholder,
         input.form-control::placeholder {
             font-style: italic;
-        }
-        label {
-            height: 40px;
-            background-color: white;
-            margin-bottom: 0;
-            padding: 10px;
-            flex: 1;
-            margin-right: 10px;
-            font-style: italic;
-            color: #170604;
+            color: rgb(124, 124, 124);
         }
         .type-button {
             height: 40px;
@@ -51,6 +45,48 @@
                 margin-top: 5px;
                 width: auto;
                 object-fit: contain;
+            }
+        }
+    }
+}
+
+.quote-form {
+    .panel {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        .trip-info {
+            font-style: italic;
+            font-size: 15px;
+            .icon {
+                width: 50px;
+            }
+        }
+        .destination-flow-item {
+            position: relative;
+            color: black;
+            img.start {
+                height: 39.5px;
+                margin-left: 6px;
+                margin-bottom: -10px;
+            }
+            img.plus {
+                margin-left: 14px;
+                height: 45px;
+            }
+            img.last {
+                margin-left: 6px;
+                height: 56px;
+            }
+            label {
+                position: absolute;
+                left: 50px;
+                font-size: 13px;
+                top: 13px;
+                text-transform: capitalize;
+            }
+            &:first-child {
+                label {
+                    top: -2px;
+                }
             }
         }
     }
