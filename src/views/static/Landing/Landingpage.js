@@ -78,6 +78,7 @@ const TourItemData = [
 ]
 
 const Landingpage = ({}) => {
+  console.log('111111111111111111111');
   return (
   	<div className="landing-page">
   		<section className="poster">
